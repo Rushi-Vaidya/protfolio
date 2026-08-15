@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rushikesh | Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg-dark: #f8fafc;
+      --bg-card: #ffffff;
+      --primary: #2563eb;
+      --secondary: #e0f2fe;
+      --text-light: #0f172a;
+      --text-muted: #475569;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: var(--text-light) !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: var(--primary) !important;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary) 0%, #ffffff 100%);
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .hero span {
+      color: var(--primary);
+    }
+
+    .hero img {
+      width: 220px;
+      border-radius: 50%;
+      border: 5px solid var(--primary);
+      box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-main {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn-main:hover {
+      background: #0ea5e9;
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+
+    /* Section */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 70px;
+      height: 3px;
+      background: var(--primary);
+      display: block;
+      margin: 15px auto;
+      border-radius: 5px;
+    }
+
+    /* Cards */
+    .card-custom {
+      background: var(--bg-card);
+      border: none;
+      border-radius: 16px;
+      padding: 25px;
+      height: 100%;
+      transition: 0.3s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-custom:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Skills */
+    .skill-box {
+      background: var(--bg-card);
+      padding: 15px;
+      border-radius: 12px;
+      font-weight: 500;
+      transition: 0.3s;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-box:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Projects */
+    .project-card img {
+      border-radius: 12px;
+    }
+
+    /* Contact */
+    .form-control {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: var(--text-light);
+    }
+
+    .form-control:focus {
+      background: #ffffff;
+      color: var(--text-light);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+    }
+
+    /* Footer */
+    footer {
+      background: #e2e8f0;
+      text-align: center;
+      padding: 20px 0;
+      color: #334155;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero img {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Rushikesh</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h1>Hi, I'm <span>Rushikesh</span></h1>
+        <h4 class="text-muted mb-3">Frontend Web Developer</h4>
+        <p class="mb-4">I design and build fast, modern and responsive websites using HTML, CSS, Bootstrap and JavaScript.</p>
+        <a href="#portfolio" class="btn btn-main me-3">View Projects</a>
+        <a href="#contact" class="btn btn-outline-primary">Hire Me</a>
+      </div>
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img src="rushi1.png" alt="Profile">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <p class="text-muted">
+          I am a passionate frontend developer focused on creating beautiful, user-friendly and performance-optimized websites. I continuously improve my skills and follow modern web standards.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-custom text-center">
+          <h5>SSC (10th)</h5>
+          <p class="text-muted">Maharashtra Board</p>
+          <p>2020</p>
+          <span class="text-primary">95%</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-custom text-center">
+          <h5>HSC (12th)</h5>
+          <p class="text-muted">Science</p>
+          <p>2022</p>
+          <span class="text-primary">78%</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-custom text-center">
+          <h5>MHT-CET</h5>
+          <p class="text-muted">Engineering</p>
+          <p>2022</p>
+          <span class="text-primary">89.45%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work -->
+<section id="work">
+  <div class="container">
+    <h2 class="section-title">How I Work</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h5><i class="fa-solid fa-lightbulb me-2"></i>Planning</h5>
+          <p class="text-muted">Understanding requirements and project goals.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h5><i class="fa-solid fa-pen-nib me-2"></i>Design</h5>
+          <p class="text-muted">Creating responsive and modern UI layouts.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-custom">
+          <h5><i class="fa-solid fa-code me-2"></i>Development</h5>
+          <p class="text-muted">Writing clean and optimized code.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-custom">
+          <h5><i class="fa-solid fa-bug me-2"></i>Testing</h5>
+          <p class="text-muted">Cross-browser and device testing.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-custom">
+          <h5><i class="fa-solid fa-rocket me-2"></i>Delivery</h5>
+          <p class="text-muted">Final optimized project deployment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="portfolio">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-custom project-card">
+          <img src="https://via.placeholder.com/400x230" class="img-fluid mb-3" alt="Hospital Management">
+          <h5>Hospital Management</h5>
+          <p class="text-muted">Hospital record management system.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-custom project-card">
+          <img src="https://via.placeholder.com/400x230" class="img-fluid mb-3" alt="Nursery Management">
+          <h5>Nursery Management</h5>
+          <p class="text-muted">Online nursery system.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-custom project-card">
+          <img src="https://via.placeholder.com/400x230" class="img-fluid mb-3" alt="Portfolio Website">
+          <h5>Portfolio Website</h5>
+          <p class="text-muted">Personal responsive portfolio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">My Skills</h2>
+    <div class="row text-center g-3">
+      <div class="col-md-2 col-6"><div class="skill-box">HTML</div></div>
+      <div class="col-md-2 col-6"><div class="skill-box">CSS</div></div>
+      <div class="col-md-2 col-6"><div class="skill-box">JavaScript</div></div>
+      <div class="col-md-2 col-6"><div class="skill-box">Bootstrap</div></div>
+      <div class="col-md-2 col-6"><div class="skill-box">Python</div></div>
+      <div class="col-md-2 col-6"><div class="skill-box">Java</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="row g-4">
+      <div class="col-md-5">
+        <div class="card-custom">
+          <h5>Get In Touch</h5>
+          <p class="text-muted"><i class="fa-solid fa-envelope me-2"></i> rushikeshvaidya89@gmail.com</p>
+          <p class="text-muted"><i class="fa-solid fa-phone me-2"></i> +91 9307623194</p>
+          <p class="text-muted"><i class="fab fa-linkedin me-2"></i> linkedin.com/in/Rushi-Vaidya</p>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="card-custom">
+          <form>
+            <input class="form-control mb-3" type="text" placeholder="Your Name" required>
+            <input class="form-control mb-3" type="email" placeholder="Your Email" required>
+            <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+            <button class="btn btn-main w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 Rushikesh | Designed & Developed by Me</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
